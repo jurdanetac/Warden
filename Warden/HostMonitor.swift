@@ -25,7 +25,7 @@ class HostMonitor: Identifiable {
     }
 
     private func ping() {
-        if _executeProcess("/sbin/ping", ["-c 3", id]) == 0 {
+        if _executeProcess("/sbin/ping", ["-c", "3", id]) == 0 {
             up = true
         }
         up = false
@@ -37,10 +37,16 @@ class HostMonitor: Identifiable {
 
         process.standardOutput = pipe
         process.standardError = pipe
-        process.launchPath = binary
+        process.executableURL = URL(fileURLWithPath: binary)
         process.arguments = arguments
 
-        try! process.run()
-        return process.terminationStatus
+        do {
+            try process.run()
+            process.waitUntilExit()
+            return process.terminationStatus
+        } catch {
+            print("Failed to run ping: \(error)")
+            return -1
+        }
     }
 }
