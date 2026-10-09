@@ -7,33 +7,40 @@
 
 import Foundation
 
-func executeProcess(_ binary: String, _ arguments: [String]) -> String {
-    let process = Process()
-    let pipe = Pipe()
-
-    process.standardOutput = pipe
-    process.standardError = pipe
-    process.launchPath = binary
-    process.arguments = arguments
-
-    try! process.run()
-    let data = try! pipe.fileHandleForReading.readToEnd()
-    return String(data: data!, encoding: .utf8) ?? ""
-}
-
-class HostMonitor {
-    let ip: String
+@Observable
+class HostMonitor: Identifiable {
+    let id: String
     let name: String
+    var up: Bool = false
+    // var mac: String? = nil
 
     init(ip: String, name: String) {
-        self.ip = ip
+        id = ip
         self.name = name
     }
 
-    func ping() {
-        let result = executeProcess("/sbin/ping", ["-c 3", ip])
-        print(result)
+    func wake() {
+        print("woke")
+        up = true
     }
 
-    // func wakeOnLAN() {}
+    private func ping() {
+        if _executeProcess("/sbin/ping", ["-c 3", id]) == 0 {
+            up = true
+        }
+        up = false
+    }
+
+    private func _executeProcess(_ binary: String, _ arguments: [String]) -> Int32 {
+        let process = Process()
+        let pipe = Pipe()
+
+        process.standardOutput = pipe
+        process.standardError = pipe
+        process.launchPath = binary
+        process.arguments = arguments
+
+        try! process.run()
+        return process.terminationStatus
+    }
 }

@@ -8,31 +8,20 @@
 import SwiftUI
 
 struct MenuBarContentView: View {
+    @State var hosts = [
+        HostMonitor(ip: "127.0.0.1", name: "localhost"),
+        // HostMonitor(ip: "192.168.1.1", name: "router"),
+    ]
+
     var body: some View {
-        let devices = [
-            HostMonitor(ip: "127.0.0.1", name: "localhost"),
-            HostMonitor(ip: "192.168.1.1", name: "router"),
-            HostMonitor(ip: "192.168.1.2", name: "server"),
-        ]
-
         VStack {
-            ForEach(devices.indices, id: \.self) { index in
-                let device = devices[index]
-
-                Button(action: {
-                    device.ping()
-                }, label: {
-                    Text(device.name)
-                })
-            }
+            ForEach(hosts) { host in MenuItem(host: host) }
 
             Divider()
 
-            Button(action: {
+            Button("Quit") {
                 NSApplication.shared.terminate(nil)
-            }, label: {
-                Text("Quit")
-            })
+            }.keyboardShortcut("q", modifiers: .command)
         }
     }
 }
