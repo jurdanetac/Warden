@@ -12,22 +12,22 @@ struct MenuBarContentView: View {
         let devices = [
             HostMonitor(ip: "127.0.0.1", name: "localhost"),
             HostMonitor(ip: "192.168.1.1", name: "router"),
-            HostMonitor(ip: "192.168.1.2", name: "server")
+            HostMonitor(ip: "192.168.1.2", name: "server"),
         ]
-        
+
         VStack {
             ForEach(devices.indices, id: \.self) { index in
                 let device = devices[index]
-                
+
                 Button(action: {
                     device.ping()
                 }, label: {
                     Text(device.name)
                 })
             }
-            
+
             Divider()
-            
+
             Button(action: {
                 NSApplication.shared.terminate(nil)
             }, label: {
