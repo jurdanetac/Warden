@@ -10,7 +10,9 @@ import SwiftUI
 struct MenuBarContentView: View {
     @State var hosts = [
         HostMonitor(ip: "127.0.0.1", name: "localhost"),
-        // HostMonitor(ip: "192.168.1.1", name: "router"),
+        HostMonitor(ip: "192.168.1.1", name: "router"),
+        HostMonitor(ip: "192.168.1.2", name: "test"),
+        HostMonitor(ip: "192.168.1.3", name: "offline"),
     ]
 
     var body: some View {

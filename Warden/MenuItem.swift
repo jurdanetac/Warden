@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct MenuItem: View {
-    let host: HostMonitor
+    @State var host: HostMonitor
 
     var body: some View {
         if !host.up {
             Button(host.name, systemImage: "bolt.fill") {
+                // TODO: async
                 host.wake()
             }
             .help(host.id)
