@@ -13,8 +13,12 @@ struct MenuItem: View {
     var body: some View {
         if !host.up {
             Button(host.name, systemImage: "bolt.fill") {
-                // TODO: async
-                host.wake()
+                Task {
+                    host.wake()
+                }
+            }
+            .task {
+                host.startMonitoring()
             }
             .help(host.id)
             .labelStyle(.titleAndIcon)
