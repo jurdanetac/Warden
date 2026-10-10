@@ -21,6 +21,18 @@ struct MenuBarContentView: View {
 
             Divider()
 
+            if hosts.first(where: { $0.up == true }) != nil {
+                Menu("Power Off") {
+                    ForEach(hosts) { host in
+                        if host.up {
+                            Button(action: {
+                                print("power off \(host.name)")
+                            }, label: { Text(host.name) })
+                        }
+                    }
+                }
+            }
+
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
             }.keyboardShortcut("q", modifiers: .command)
