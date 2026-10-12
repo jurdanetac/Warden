@@ -12,7 +12,7 @@ struct MenuItem: View {
 
     var body: some View {
         if !host.up {
-            Button(host.name, systemImage: "bolt.fill") {
+            Button(host.ipAddress, systemImage: "bolt.fill") {
                 Task {
                     host.wake()
                 }
@@ -20,10 +20,10 @@ struct MenuItem: View {
             .task {
                 host.startMonitoring()
             }
-            .help(host.id)
+            .help(host.ipAddress)
             .labelStyle(.titleAndIcon)
         } else {
-            Text(host.name)
+            Text(host.ipAddress)
         }
     }
 }

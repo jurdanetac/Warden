@@ -7,52 +7,46 @@
 
 import Foundation
 
-@Observable
-@MainActor
 class HostMonitor: Identifiable {
-    let id: String
-    var mac: String?
-    let name: String
+    let ipAddress: String
+
+    var macAddress: String?
+    let name: String?
+
     var up: Bool = false
     var isMonitoring: Bool = false
 
-    private var monitoringTask: Task<Void, Never>?
+    private var monitoringTask: Task<Void, Error>?
 
-    init(ip: String, name: String) {
-        id = ip
+    init(at ip: String, alias name: String) {
+        ipAddress = ip
         self.name = name
     }
 
-    isolated deinit {
+    deinit {
         monitoringTask?.cancel()
     }
 
-    func wake() -> Bool {
-        guard let mac else { return false }
-        Task {
-            try! await executeProcess("/opt/homebrew/bin/wakeonlan", [mac])
-        }
-        return true
+    func wake() {
+//        guard let mac else { return false }
+//        Task {
+//            try! await executeProcess("/opt/homebrew/bin/wakeonlan", [mac])
+//        }
+//        return true
+        print("wakeonlan \(ipAddress)")
     }
 
     func startMonitoring() {
-        guard monitoringTask == nil else { return }
+        stopMonitoring()
         isMonitoring = true
 
-        monitoringTask = Task { [weak self] in
+        monitoringTask = Task {
             while !Task.isCancelled {
-                guard let self else { break }
-
-                await ping()
-
-                do {
-                    try await Task.sleep(for: .seconds(5))
-                } catch {
-                    break
-                }
+                ping()
+                try await Task.sleep(for: .seconds(5))
             }
 
-            self?.isMonitoring = false
+            isMonitoring = false
         }
     }
 
@@ -62,21 +56,20 @@ class HostMonitor: Identifiable {
         isMonitoring = false
     }
 
-    private func ping() async {
-        do {
-            let status = try await executeProcess("/sbin/ping", ["-c", "3", id])
-            up = (status == 0)
-        } catch {
-            up = false
-        }
+    private func ping() {
+//        do {
+//            let status = try await executeProcess("/sbin/ping", ["-c", "3", id])
+//            up = (status == 0)
+//        } catch {
+//            up = false
+//        }
+        print("ping \(ipAddress)")
     }
 
     private nonisolated func executeProcess(_ binary: String, _ arguments: [String]) async throws -> Int32 {
         let process = Process()
         process.executableURL = URL(fileURLWithPath: binary)
         process.arguments = arguments
-        process.standardOutput = Pipe()
-        process.standardError = Pipe()
 
         return try await withCheckedThrowingContinuation { continuation in
             do {
