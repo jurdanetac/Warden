@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		0DFEDA4F30793EED00C65826 /* Warden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Warden.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D3837BF308949BF00178C29 /* Warden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Warden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0DFEDA5130793EED00C65826 /* Warden */ = {
+		0D3837C1308949BF00178C29 /* Warden */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Warden;
 			sourceTree = "<group>";
@@ -19,7 +19,7 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0DFEDA4C30793EED00C65826 /* Frameworks */ = {
+		0D3837BC308949BF00178C29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
 			);
@@ -27,18 +27,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0DFEDA4630793EED00C65826 = {
+		0D3837B6308949BF00178C29 = {
 			isa = PBXGroup;
 			children = (
-				0DFEDA5130793EED00C65826 /* Warden */,
-				0DFEDA5030793EED00C65826 /* Products */,
+				0D3837C1308949BF00178C29 /* Warden */,
+				0D3837C0308949BF00178C29 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0DFEDA5030793EED00C65826 /* Products */ = {
+		0D3837C0308949BF00178C29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0DFEDA4F30793EED00C65826 /* Warden.app */,
+				0D3837BF308949BF00178C29 /* Warden.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,60 +46,60 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0DFEDA4E30793EED00C65826 /* Warden */ = {
+		0D3837BE308949BF00178C29 /* Warden */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0DFEDA5A30793EEE00C65826 /* Build configuration list for PBXNativeTarget "Warden" */;
+			buildConfigurationList = 0D3837CA308949C000178C29 /* Build configuration list for PBXNativeTarget "Warden" */;
 			buildPhases = (
-				0DFEDA4B30793EED00C65826 /* Sources */,
-				0DFEDA4C30793EED00C65826 /* Frameworks */,
-				0DFEDA4D30793EED00C65826 /* Resources */,
+				0D3837BB308949BF00178C29 /* Sources */,
+				0D3837BC308949BF00178C29 /* Frameworks */,
+				0D3837BD308949BF00178C29 /* Resources */,
 			);
 			buildRules = (
 			);
 			fileSystemSynchronizedGroups = (
-				0DFEDA5130793EED00C65826 /* Warden */,
+				0D3837C1308949BF00178C29 /* Warden */,
 			);
 			name = Warden;
 			productName = Warden;
-			productReference = 0DFEDA4F30793EED00C65826 /* Warden.app */;
+			productReference = 0D3837BF308949BF00178C29 /* Warden.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0DFEDA4730793EED00C65826 /* Project object */ = {
+		0D3837B7308949BF00178C29 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2700;
-				LastUpgradeCheck = 2700;
+				LastSwiftUpdateCheck = 2710;
+				LastUpgradeCheck = 2710;
 				TargetAttributes = {
-					0DFEDA4E30793EED00C65826 = {
-						CreatedOnToolsVersion = 27.0;
+					0D3837BE308949BF00178C29 = {
+						CreatedOnToolsVersion = 27.1;
 					};
 				};
 			};
-			buildConfigurationList = 0DFEDA4A30793EED00C65826 /* Build configuration list for PBXProject "Warden" */;
+			buildConfigurationList = 0D3837BA308949BF00178C29 /* Build configuration list for PBXProject "Warden" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 0DFEDA4630793EED00C65826;
+			mainGroup = 0D3837B6308949BF00178C29;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 0DFEDA5030793EED00C65826 /* Products */;
+			productRefGroup = 0D3837C0308949BF00178C29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0DFEDA4E30793EED00C65826 /* Warden */,
+				0D3837BE308949BF00178C29 /* Warden */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0DFEDA4D30793EED00C65826 /* Resources */ = {
+		0D3837BD308949BF00178C29 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -107,7 +107,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0DFEDA4B30793EED00C65826 /* Sources */ = {
+		0D3837BB308949BF00178C29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
 			);
@@ -115,7 +115,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		0DFEDA5830793EEE00C65826 /* Debug configuration for PBXProject "Warden" */ = {
+		0D3837C8308949C000178C29 /* Debug configuration for PBXProject "Warden" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -178,7 +178,7 @@
 			};
 			name = Debug;
 		};
-		0DFEDA5930793EEE00C65826 /* Release configuration for PBXProject "Warden" */ = {
+		0D3837C9308949C000178C29 /* Release configuration for PBXProject "Warden" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -233,7 +233,7 @@
 			};
 			name = Release;
 		};
-		0DFEDA5B30793EEE00C65826 /* Debug configuration for PBXNativeTarget "Warden" */ = {
+		0D3837CB308949C000178C29 /* Debug configuration for PBXNativeTarget "Warden" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -241,16 +241,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = NO;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jurdanetac.Warden;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jurdanetac.Warden;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -262,7 +264,7 @@
 			};
 			name = Debug;
 		};
-		0DFEDA5C30793EEE00C65826 /* Release configuration for PBXNativeTarget "Warden" */ = {
+		0D3837CC308949C000178C29 /* Release configuration for PBXNativeTarget "Warden" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -270,16 +272,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = NO;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jurdanetac.Warden;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jurdanetac.Warden;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -294,24 +298,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0DFEDA4A30793EED00C65826 /* Build configuration list for PBXProject "Warden" */ = {
+		0D3837BA308949BF00178C29 /* Build configuration list for PBXProject "Warden" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0DFEDA5830793EEE00C65826 /* Debug configuration for PBXProject "Warden" */,
-				0DFEDA5930793EEE00C65826 /* Release configuration for PBXProject "Warden" */,
+				0D3837C8308949C000178C29 /* Debug configuration for PBXProject "Warden" */,
+				0D3837C9308949C000178C29 /* Release configuration for PBXProject "Warden" */,
 			);
 			defaultConfigurationName = Release;
 		};
-		0DFEDA5A30793EEE00C65826 /* Build configuration list for PBXNativeTarget "Warden" */ = {
+		0D3837CA308949C000178C29 /* Build configuration list for PBXNativeTarget "Warden" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0DFEDA5B30793EEE00C65826 /* Debug configuration for PBXNativeTarget "Warden" */,
-				0DFEDA5C30793EEE00C65826 /* Release configuration for PBXNativeTarget "Warden" */,
+				0D3837CB308949C000178C29 /* Debug configuration for PBXNativeTarget "Warden" */,
+				0D3837CC308949C000178C29 /* Release configuration for PBXNativeTarget "Warden" */,
 			);
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0DFEDA4730793EED00C65826 /* Project object */;
+	rootObject = 0D3837B7308949BF00178C29 /* Project object */;
 	validationLevel = 1;
 }

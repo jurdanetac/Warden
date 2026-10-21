@@ -2,25 +2,23 @@
 //  WardenApp.swift
 //  Warden
 //
-//  Created by Juan on 9/10/26.
+//  Created by Juan on 21/10/26.
 //
 
 import SwiftUI
 
 @main
 struct WardenApp: App {
-    var body: some Scene {
-        let appName = "Warden"
-        let menuBarIcon = "point.3.filled.connected.trianglepath.dotted"
+    let name = "Warden"
+    let icon = "point.3.filled.connected.trianglepath.dotted"
 
-        // Menu Bar Utility
-        MenuBarExtra(appName, systemImage: menuBarIcon) {
+    var body: some Scene {
+//        WindowGroup {
+//            ContentView()
+//        }
+
+        MenuBarExtra(name, systemImage: icon) {
             MenuBarContentView()
         }.menuBarExtraStyle(.menu)
-
-        // Window UI
-        // WindowGroup {
-        //     ContentView()
-        // }
     }
 }
